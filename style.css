@@ -36,7 +36,7 @@
     background-color: #eaecef;
     padding-left: 10px;
 }
-#addBtn{
+#addBtn, #updateBtn{
     width: 12%;
     height: 5vh;
     background-color: #2E5077;
@@ -45,19 +45,23 @@
     font-size: 16px;
     border-radius: 5px;
 }
+.hide{
+    display: none;
+}
 #box{
     width: 100%;
     height: auto;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-around;
 }
 #todo, #doing, #done{
     width: 32%;
-    height: auto;
+    height: 50vh;
+    border: 10px solid #eaecef;
     background-color: #eaecef;
     border-radius: 10px;
     padding-bottom: 10px;
+    overflow: auto;
 }
 h3{
     margin-top: 10px;
@@ -65,7 +69,7 @@ h3{
 }
 .task{
     width: 95%;
-    height: auto;
+    height: 10vh;
     background-color: white;
     border-radius: 10px;
     margin: auto;
@@ -86,10 +90,65 @@ h3{
     margin-top: 10px;
     margin-bottom: 10px;
 }
-.delete{
+.dlt{
     width: 10%;
     color: white;
     background-color: rgb(191, 0, 0);
     border: none;
     border-radius: 5px;
+}
+
+
+
+@media only screen and (max-width: 576px){
+    #main{
+        width: 90%;
+        height: auto;
+    }
+    #inputBox{
+        width: 85%;
+    }
+    #addText{
+        width: 75%;
+    }
+    #addBtn, #updateBtn{
+        width: 20%;
+    }
+    #box{
+        display: block;
+    }
+    #todo, #doing, #done{
+        width: 85%;
+        height: 20vh;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px){
+    #main{
+        width: 90%;
+        height: auto;
+    }
+    #inputBox{
+        width: 85%;
+    }
+    #addText{
+        width: 75%;
+    }
+    #addBtn, #updateBtn{
+        width: 20%;
+    }
+    #box{
+        display: block;
+    }
+    #todo, #doing, #done{
+        width: 85%;
+        height: 20vh;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+}
+@media only screen and (min-width: 767px) and (max-width: 991px){
+}
+@media only screen and (min-width: 992px) and (max-width: 1200px){
 }
