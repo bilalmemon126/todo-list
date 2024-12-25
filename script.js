@@ -13,25 +13,27 @@ addBtn.addEventListener('click', function () {
         task.classList.add("task")
         task.id = "task"+i;
         todo.appendChild(task)
-
+        
         para = document.createElement("p")
         para.classList.add("para")
         para.innerHTML = input
         task.appendChild(para)
-
+        
         input = document.getElementById("addText").value = "";
-
+        
         edit = document.createElement("button")
         edit.classList.add("edit")
         edit.id = "edit"+i;
         edit.innerHTML = `<span class="material-symbols-outlined">edit</span>`
         task.appendChild(edit)
 
+
         edit.addEventListener("click", function(){
             get = this;
             text = get.previousElementSibling.innerHTML;
             input = document.getElementById("addText").value = text;
 
+            updateBtn.replaceWith(updateBtn.cloneNode(true));
             updateBtn = document.getElementById("updateBtn")
             updateBtn.classList.remove("hide")
             addBtn.classList.add("hide")
@@ -39,7 +41,7 @@ addBtn.addEventListener('click', function () {
             updateBtn.addEventListener("click", function(){
                 input = document.getElementById("addText").value;
                 if(input === ''){
-                    // alert("plaese Enter Value")
+                    alert("plaese Enter Value")
                 }
                 else{
                     addBtn.classList.remove("hide")
@@ -48,12 +50,12 @@ addBtn.addEventListener('click', function () {
                     input = document.getElementById("addText").value = '';
                 }
             })
-
+            
         })
 
         dlt = document.createElement("button")
         dlt.classList.add("dlt")
-        edit.id = "dlt"+i;
+        dlt.id = "dlt"+i;
         dlt.innerHTML = `<span class="material-symbols-outlined">delete</span>`
         task.appendChild(dlt)
 
