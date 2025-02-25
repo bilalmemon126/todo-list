@@ -17,6 +17,8 @@
     height: 70vh;
     background-color: #ffffff;
     border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 0 10px #cccccc;
 }
 #inputBox{
     width: 80%;
@@ -52,6 +54,7 @@
     width: 100%;
     height: auto;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
 }
 #todo, #doing, #done{
@@ -67,6 +70,7 @@ h3{
     margin-top: 10px;
     text-align: center;
 }
+
 .task{
     width: 95%;
     height: 10vh;
@@ -115,13 +119,19 @@ h3{
         width: 20%;
     }
     #box{
-        display: block;
+        justify-content: center;
     }
     #todo, #doing, #done{
         width: 85%;
         height: 20vh;
         margin: auto;
         margin-bottom: 20px;
+    }
+    .edit{
+        width: 12%;
+    }
+    .dlt{
+        width: 12%;
     }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px){
@@ -139,7 +149,7 @@ h3{
         width: 20%;
     }
     #box{
-        display: block;
+        justify-content: center;
     }
     #todo, #doing, #done{
         width: 85%;
@@ -149,6 +159,32 @@ h3{
     }
 }
 @media only screen and (min-width: 767px) and (max-width: 991px){
-}
-@media only screen and (min-width: 992px) and (max-width: 1200px){
+    #main{
+        width: 90%;
+        height: auto;
+    }
+    #inputBox{
+        width: 85%;
+    }
+    #addText{
+        width: 75%;
+    }
+    #addBtn, #updateBtn{
+        width: 20%;
+    }
+    #box{
+        justify-content: center;
+    }
+    #todo, #doing, #done{
+        width: 85%;
+        height: 20vh;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+    .edit{
+        width: 8%;
+    }
+    .dlt{
+        width: 8%;
+    }
 }
